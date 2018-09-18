@@ -15,6 +15,11 @@ public class OctoprintStatus {
     }
 
 
+    public boolean isPrinterConnected(){
+        return !connection.current.state.toLowerCase().equals("closed");
+    }
+
+
 
 
 }
