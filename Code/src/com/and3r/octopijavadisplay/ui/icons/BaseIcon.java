@@ -11,6 +11,7 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
     private int baseWidth;
     private int baseHeight;
     private double aspectRatio;
+    private double multiplicator;
 
     private int[][] xPointsCalculated;
     private int[][] yPointsCalculated;
@@ -21,6 +22,15 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
     public BaseIcon(Object... params){
 
         init(params);
+        setOpaque(false);
+
+        postInit();
+
+        addComponentListener(this);
+    }
+
+    private void postInit(){
+        multiplicator = 1;
 
         int[][] initialXPoints = getInitialXPoints();
         int[][] initialYPoints = getInitialYPoints();
@@ -54,7 +64,7 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
         // Calculate width
         for (int i=0; i<initialXPoints.length; i++){
             for (int z=0; z<initialXPoints[i].length; z++){
-                if (initialXPoints[i][z] > baseWidth){
+                if (initialXPoints[i][z] + margin*2 > baseWidth){
                     baseWidth = initialXPoints[i][z] + margin*2;
                 }
             }
@@ -63,14 +73,12 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
         // Calculate height
         for (int i=0; i<initialYPoints.length; i++){
             for (int z=0; z<initialYPoints[i].length; z++){
-                if (initialYPoints[i][z] > baseHeight){
+                if (initialYPoints[i][z] + margin*2 > baseHeight){
                     baseHeight = initialYPoints[i][z] + margin*2;
                 }
             }
         }
         aspectRatio = baseWidth / (double) baseHeight;
-
-        addComponentListener(this);
     }
 
     protected abstract void init(Object... params);
@@ -92,7 +100,11 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
                 g.fillPolygon(xPointsCalculated[i], yPointsCalculated[i], xPointsCalculated[i].length);
             }
             Color strokeColor = getStrokeColor(i);
-            graphics2D.setStroke(new BasicStroke(getStrokeWidth(i)));
+            if (isStrokeDependentOnSize()){
+                graphics2D.setStroke(new BasicStroke((float)(getStrokeWidth(i) * multiplicator)));
+            }else{
+                graphics2D.setStroke(new BasicStroke(getStrokeWidth(i)));
+            }
             if (strokeColor != null){
                 g.setColor(strokeColor);
                 g.drawPolygon(xPointsCalculated[i], yPointsCalculated[i], xPointsCalculated[i].length);
@@ -104,7 +116,6 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
     @Override
     public void componentResized(ComponentEvent e) {
         double newAspectRatio = getWidth() / (double) getHeight();
-        double multiplicator;
         if (aspectRatio > newAspectRatio){
             multiplicator = getWidth() / (double) baseWidth;
         }else{
@@ -125,6 +136,7 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
         int margin = getMargin();
 
 
+
         // Center image on the middle
         int movePixelX = (int) (getWidth() - (baseWidth * multiplicator)) / 2;
         int movePixelY = (int) (getHeight() - (baseHeight * multiplicator)) / 2;
@@ -142,7 +154,6 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
                 i++;
             }
         }
-
 
         repaint();
     }
@@ -169,6 +180,7 @@ public abstract class BaseIcon extends JPanel implements ComponentListener {
     protected abstract int[][] getInitialYPoints();
 
     protected abstract int getStrokeWidth(int i);
+    protected abstract boolean isStrokeDependentOnSize();
     protected abstract Color getStrokeColor(int i);
     protected abstract Color getFillColor(int i);
 

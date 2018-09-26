@@ -16,7 +16,7 @@ public class PrinterNotConnectedPanel extends BasePanel {
     }
 
     @Override
-    protected void init() {
+    protected void init(Object... args) {
         setLayout(new BorderLayout());
         reload = true;
         JPanel mainPanel = new JPanel();

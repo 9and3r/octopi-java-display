@@ -1,5 +1,8 @@
 package com.and3r.octopijavadisplay.ui.icons;
 
+import com.and3r.octopijavadisplay.ui.ColorManager;
+
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -40,6 +43,25 @@ public abstract class ClickableIcon extends BaseIcon implements MouseListener {
     public void mouseExited(MouseEvent e) {
         hover = false;
         repaint();
+    }
+
+    @Override
+    protected Color getStrokeColor(int i) {
+        if (pressed || hover){
+            return ColorManager.buttonNormalStateStrokeColorPressed;
+        }else{
+            return ColorManager.buttonNormalStateStrokeColor;
+        }
+
+    }
+
+    @Override
+    protected Color getFillColor(int i) {
+        if (pressed || hover){
+            return ColorManager.buttonNormalStateStrokeColor;
+        }else{
+            return null;
+        }
     }
 
 }

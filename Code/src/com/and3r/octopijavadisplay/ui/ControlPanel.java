@@ -18,7 +18,8 @@ public class ControlPanel extends BasePanel {
     }
 
     @Override
-    protected void init() {
+    protected void init(Object... args) {
+        setOpaque(false);
         setLayout(new GridLayout(0, 5));
 
         ArrowIcon arrowIconUp = new ArrowIcon(ArrowIcon.UP);
@@ -66,22 +67,49 @@ public class ControlPanel extends BasePanel {
             }
         });
 
+        ArrowIcon arrowUpZ = new ArrowIcon(ArrowIcon.UP, true);
+        arrowUpZ.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                octoprint.moveHead("z", 10);
+            }
+        });
+
+        ArrowIcon arrowDownZ = new ArrowIcon(ArrowIcon.DOWN, true);
+        arrowDownZ.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                octoprint.moveHead("z", -10);
+            }
+        });
+
+        HomeIcon homeIconZ = new HomeIcon();
+        homeIconZ.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                octoprint.homeZ();
+            }
+        });
+
 
 
         add(Box.createGlue());
         add(arrowIconUp);
         add(Box.createGlue());
         add(Box.createGlue());
-        add(new JLabel("Up (Z)"));
+        add(arrowUpZ);
         add(arrowIconLeft);
         add(homeIcon);
         add(arrowIconRight);
         add(Box.createGlue());
-        add(new JLabel("Home (Z)"));
+        add(homeIconZ);
         add(Box.createGlue());
         add(arrowIconDown);
         add(Box.createGlue());
         add(Box.createGlue());
-        add(new JLabel("Down (Z)"));
+        add(arrowDownZ);
     }
 }

@@ -1,5 +1,8 @@
 package com.and3r.octopijavadisplay.ui.icons;
 
+import com.and3r.octopijavadisplay.ui.ColorManager;
+import com.and3r.octopijavadisplay.ui.DimensionManager;
+
 import java.awt.*;
 
 public class HomeIcon extends ClickableIcon {
@@ -26,20 +29,12 @@ public class HomeIcon extends ClickableIcon {
 
     @Override
     protected int getStrokeWidth(int i) {
-        return 5;
+        return DimensionManager.defaultStrokeSize * 2;
     }
 
     @Override
-    protected Color getStrokeColor(int i) {
-        return Color.BLACK;
+    protected boolean isStrokeDependentOnSize() {
+        return true;
     }
 
-    @Override
-    protected Color getFillColor(int i) {
-        if (pressed){
-            return Color.GREEN;
-        }else{
-            return null;
-        }
-    }
 }

@@ -4,14 +4,13 @@ import com.and3r.octopijavadisplay.OctoprintConnectionManager;
 import com.and3r.octopijavadisplay.OctoprintStatus;
 import com.and3r.octopijavadisplay.ui.BasePanel;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class TemperaturesPanel extends BasePanel {
 
-    private TemperatureIcon extruder0;
-    private TemperatureIcon extruder1;
-    private TemperatureIcon bed;
+    private TemperatureDisplayPanel extruder0;
+    private TemperatureDisplayPanel extruder1;
+    private TemperatureDisplayPanel bed;
 
     public TemperaturesPanel(OctoprintConnectionManager octoprintConnectionManager) {
         super(octoprintConnectionManager);
@@ -19,22 +18,25 @@ public class TemperaturesPanel extends BasePanel {
 
 
     @Override
-    protected void init() {
+    protected void init(Object... args) {
         setOpaque(false);
         setLayout(new GridLayout(1,0));
-        extruder0 = new TemperatureIcon();
-        extruder1 = new TemperatureIcon();
-        bed = new TemperatureIcon();
+        extruder0 = new TemperatureDisplayPanel(true);
+        //extruder1 = new TemperatureDisplayPanel(true);
+        bed = new TemperatureDisplayPanel(false);
         add(bed);
         add(extruder0);
-        add(extruder1);
+        //add(extruder1);
     }
 
     @Override
     public void onOctoprintStatusChanged(OctoprintStatus status) {
         super.onOctoprintStatusChanged(status);
-        bed.setTemp(status.printerStatus.temperature.bed);
-        extruder0.setTemp(status.printerStatus.temperature.tool0);
-        //extruder1.setTemp(status.printerStatus.temperature.tool1);
+        if (status.isPrinterConnected()){
+            bed.setTemp(status.printerStatus.temperature.bed);
+            extruder0.setTemp(status.printerStatus.temperature.tool0);
+            //extruder1.setTemp(status.printerStatus.temperature.tool1);
+        }
+
     }
 }

@@ -12,13 +12,13 @@ public abstract class BasePanel extends JPanel implements OctoprintStatusListene
 
     protected OctoprintConnectionManager octoprint;
 
-    public BasePanel(OctoprintConnectionManager octoprintConnectionManager){
+    public BasePanel(OctoprintConnectionManager octoprintConnectionManager, Object... args){
         octoprint = octoprintConnectionManager;
-        init();
+        init(args);
         octoprint.addStatusListener(this);
     }
 
-    protected abstract void init();
+    protected abstract void init(Object... args);
 
     @Override
     public void onOctoprintStatusChanged(OctoprintStatus status) {

@@ -1,6 +1,7 @@
 package com.and3r.octopijavadisplay;
 
 import com.and3r.octopijavadisplay.datamodels.Connection;
+import com.and3r.octopijavadisplay.datamodels.JobStatus;
 import com.and3r.octopijavadisplay.datamodels.PrinterStatus;
 import com.google.gson.Gson;
 
@@ -9,10 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
+import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -21,8 +19,8 @@ public class OctoprintConnectionManager {
     private final ArrayList<OctoprintStatusListener> octoprintStatusListeners;
     private OctoprintStatus lastStatus;
 
-    private String host;
-    private String port;
+    public final String host;
+    public final String port;
     private String apiKey;
 
     private Gson gson;
@@ -43,8 +41,11 @@ public class OctoprintConnectionManager {
         thread.start();
     }
 
+
     public void addStatusListener(OctoprintStatusListener listener){
-        listener.onOctoprintStatusChanged(lastStatus);
+        if (lastStatus != null){
+            listener.onOctoprintStatusChanged(lastStatus);
+        }
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -74,9 +75,26 @@ public class OctoprintConnectionManager {
                 response = makeGetRequest("/api/printer");
                 octoprintStatus.printerStatus = gson.fromJson(response, PrinterStatus.class);
 
+                if (octoprintStatus.isPrinterConnected()){
+                    response = makeGetRequest("/api/job");
+                    octoprintStatus.jobStatus = gson.fromJson(response, JobStatus.class);
+                }
+
             } catch (StatusCodeException e) {
+                if (e.getStatusCode() == 403){
+                    octoprintStatus.setStatus(OctoprintStatus.STATUS_OCTOPRINT_NOT_CONNECTED_BAD_KEY);
+                }
                 e.printStackTrace();
+            } catch (IOException e) {
+                //e.printStackTrace();
             }
+
+            try{
+                System.out.println(octoprintStatus.connection.current.state);
+            }catch (Exception e){
+
+            }
+
 
             this.lastStatus = octoprintStatus;
 
@@ -85,7 +103,13 @@ public class OctoprintConnectionManager {
                 public void run() {
                     synchronized (octoprintStatusListeners){
                         for (OctoprintStatusListener listener: octoprintStatusListeners){
-                            listener.onOctoprintStatusChanged(octoprintStatus);
+                            try{
+                                listener.onOctoprintStatusChanged(octoprintStatus);
+                            }catch (Exception e){
+                                e.printStackTrace();
+
+                            }
+
                         }
                     }
                 }
@@ -99,18 +123,17 @@ public class OctoprintConnectionManager {
         }
     }
 
-    private String makeGetRequest(String path) throws StatusCodeException{
+    private String makeGetRequest(String path) throws StatusCodeException, IOException {
         return makeRequest(path, false, null);
     }
 
-    public String makePostRequest(String path, String postData) throws StatusCodeException {
+    public String makePostRequest(String path, String postData) throws StatusCodeException, IOException {
         return makeRequest(path, true, postData);
     }
 
 
-    private String makeRequest(String path, boolean post, String postData) throws StatusCodeException {
+    private String makeRequest(String path, boolean post, String postData) throws StatusCodeException, IOException {
         URL url = null;
-        try {
             url = new URL("http://" + host + ":" + port + path);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setConnectTimeout(5000);
@@ -148,19 +171,10 @@ public class OctoprintConnectionManager {
                 content.append(inputLine);
             }
             in.close();
-            System.out.println(content.toString());
-
+            //System.out.println(content.toString());
 
             return content.toString();
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     // Possible commands
@@ -168,6 +182,8 @@ public class OctoprintConnectionManager {
         try {
             makePostRequest("/api/printer/printhead", "{\"axes\":[\"x\",\"y\"],\"command\":\"home\"}");
         } catch (StatusCodeException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -178,6 +194,8 @@ public class OctoprintConnectionManager {
             makePostRequest("/api/printer/printhead", "{\"axes\":[\"z\"],\"command\":\"home\"}");
         } catch (StatusCodeException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -186,6 +204,8 @@ public class OctoprintConnectionManager {
         try {
             makePostRequest("/api/printer/printhead", command);
         } catch (StatusCodeException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

@@ -1,5 +1,8 @@
 package com.and3r.octopijavadisplay.ui.icons;
 
+import com.and3r.octopijavadisplay.ui.ColorManager;
+import com.and3r.octopijavadisplay.ui.DimensionManager;
+
 import java.awt.*;
 
 public class ArrowIcon extends ClickableIcon {
@@ -19,38 +22,75 @@ public class ArrowIcon extends ClickableIcon {
         super(direction);
     }
 
+    public ArrowIcon(int direction, boolean showBed){
+        super(direction, showBed);
+    }
+
     @Override
     protected void init(Object... params) {
         direction = (int) params[0];
         int[] defaultX = {0, 20, 20, 40, 20, 20, 0};
         int[] defaultY = {10, 10, 0, 15, 30, 20, 20};
-        xPoints = new int[1][];
-        yPoints = new int[1][];
 
-        setBackground(Color.RED);
+        boolean showPlatform = false;
+        if (params.length >= 2){
+            showPlatform = (boolean) params[1];
+        }
 
+        if (showPlatform){
+            xPoints = new int[2][];
+            yPoints = new int[2][];
+        }else{
+            xPoints = new int[1][];
+            yPoints = new int[1][];
+        }
 
         // Change axes if necesary
-        if (direction == DOWN){
+        if (direction == DOWN || direction == UP){
             int[] aux = defaultX;
             defaultX = defaultY;
             defaultY = aux;
         }
 
-        if (direction == LEFT){
-            for (int i=0; i<defaultX.length; i++){
-                defaultX[i] = 40 - defaultX[i];
+        if (direction == UP){
+            // Calculate max
+            int max = 0;
+            for (int i=0; i<defaultY.length; i++ ){
+                if (max < defaultY[i]){
+                    max = defaultY[i];
+                }
+            }
+            for (int i=0; i<defaultY.length; i++){
+                defaultY[i] = max - defaultY[i];
             }
         }
 
+        if (direction == LEFT){
+            // Calculate max
+            int max = 0;
+            for (int i=0; i<defaultX.length; i++ ){
+                if (max < defaultX[i]){
+                    max = defaultX[i];
+                }
+            }
+            for (int i=0; i<defaultX.length; i++){
+                defaultX[i] = max - defaultX[i];
+            }
+        }
 
         xPoints[0] = defaultX;
         yPoints[0] = defaultY;
+
+        if (showPlatform){
+            xPoints[1] = new int[]{0, 30};
+            yPoints[1] = new int[]{50, 50};
+        }
+
     }
 
     @Override
     protected int getMargin() {
-        return 20;
+        return 10;
     }
 
     @Override
@@ -65,25 +105,14 @@ public class ArrowIcon extends ClickableIcon {
 
     @Override
     protected int getStrokeWidth(int i) {
-        return 10;
+        return DimensionManager.defaultStrokeSize;
     }
 
     @Override
-    protected Color getStrokeColor(int i) {
-        return Color.BLACK;
+    protected boolean isStrokeDependentOnSize() {
+        return true;
     }
 
-    @Override
-    protected Color getFillColor(int i) {
-        if (pressed){
-            return Color.BLUE;
-        }else if (hover){
-            return Color.GREEN;
-        }else{
-            return null;
-        }
-
-    }
 
 
 }
