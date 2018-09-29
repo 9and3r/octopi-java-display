@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gson-2.6.2" level="project" />
     <orderEntry type="library" name="jcommander-1.72" level="project" />
+    <orderEntry type="library" name="prettytime-4.0.0.Final" level="project" />
   </component>
 </module>

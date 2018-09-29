@@ -3,6 +3,7 @@ package com.and3r.octopijavadisplay.ui;
 import com.and3r.octopijavadisplay.OctoprintConnectionManager;
 import com.and3r.octopijavadisplay.OctoprintStatus;
 import com.and3r.octopijavadisplay.OctoprintStatusListener;
+import com.and3r.octopijavadisplay.ui.icons.TemperatureIcon;
 import com.and3r.octopijavadisplay.ui.icons.TemperaturesPanel;
 
 import javax.swing.*;
@@ -56,6 +57,7 @@ public class MainJframe extends JFrame implements OctoprintStatusListener {
                     tabbedPane.add("Temperature", new TemperaturesPanel(octoprintConnectionManager));
                     tabbedPane.add("Head", new ControlPanel(octoprintConnectionManager));
                     tabbedPane.add("Files", new FileListPanel(octoprintConnectionManager));
+                    tabbedPane.add("System", new SystemPanel(octoprintConnectionManager));
                     break;
                 default:
                     newPanel = new LoadingPanel(octoprintConnectionManager);

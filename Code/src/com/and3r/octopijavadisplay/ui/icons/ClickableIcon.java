@@ -47,7 +47,7 @@ public abstract class ClickableIcon extends BaseIcon implements MouseListener {
 
     @Override
     protected Color getStrokeColor(int i) {
-        if (pressed || hover){
+        if (pressed){
             return ColorManager.buttonNormalStateStrokeColorPressed;
         }else{
             return ColorManager.buttonNormalStateStrokeColor;
@@ -57,7 +57,7 @@ public abstract class ClickableIcon extends BaseIcon implements MouseListener {
 
     @Override
     protected Color getFillColor(int i) {
-        if (pressed || hover){
+        if (pressed){
             return ColorManager.buttonNormalStateStrokeColor;
         }else{
             return null;

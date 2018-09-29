@@ -27,6 +27,9 @@ public class Main {
     @Parameter(names = "-cursor", description = "Show cursor", arity=1)
     public boolean cursor = false;
 
+    @Parameter(names = "-updateTime", description = "Update time in milliseconds")
+    public int updateTime = 2000;
+
 
     // https://raspberrypi.stackexchange.com/questions/43847/startx-command-not-found
     // sudo apt-get install oracle-java8-jdk
@@ -61,8 +64,8 @@ public class Main {
 
     private void start(){
         //OctoprintConnectionManager manager = new OctoprintConnectionManager("localhost", 5000, "780CC77D0E364E2E816C903EB3A4ED32");
-        //OctoprintConnectionManager manager = new OctoprintConnectionManager("192.168.1.114", 80, "F758ADB326CA4282B3F2944E566396AA");
-        OctoprintConnectionManager manager = new OctoprintConnectionManager(host, port, apiKey);
+        //OctoprintConnectionManager manager = new OctoprintConnectionManager("192.168.1.126", 80, "F758ADB326CA4282B3F2944E566396AA");
+        OctoprintConnectionManager manager = new OctoprintConnectionManager(host, port, apiKey, updateTime);
         MainJframe mainJframe = new MainJframe(manager);
         mainJframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

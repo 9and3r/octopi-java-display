@@ -1,8 +1,6 @@
 package com.and3r.octopijavadisplay;
 
-import com.and3r.octopijavadisplay.datamodels.Connection;
-import com.and3r.octopijavadisplay.datamodels.JobStatus;
-import com.and3r.octopijavadisplay.datamodels.PrinterStatus;
+import com.and3r.octopijavadisplay.datamodels.*;
 
 public class OctoprintStatus {
 
@@ -17,6 +15,7 @@ public class OctoprintStatus {
     public PrinterStatus printerStatus;
     public JobStatus jobStatus;
     private int status;
+    public OctoprintFiles files;
 
 
     public OctoprintStatus(){

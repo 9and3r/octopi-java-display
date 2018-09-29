@@ -1,8 +1,6 @@
 package com.and3r.octopijavadisplay;
 
-import com.and3r.octopijavadisplay.datamodels.Connection;
-import com.and3r.octopijavadisplay.datamodels.JobStatus;
-import com.and3r.octopijavadisplay.datamodels.PrinterStatus;
+import com.and3r.octopijavadisplay.datamodels.*;
 import com.google.gson.Gson;
 
 import javax.swing.*;
@@ -18,6 +16,9 @@ public class OctoprintConnectionManager {
 
     private final ArrayList<OctoprintStatusListener> octoprintStatusListeners;
     private OctoprintStatus lastStatus;
+    private OctoprintStatus currentStatus;
+
+    private int updateTime;
 
     public final String host;
     public final String port;
@@ -25,13 +26,15 @@ public class OctoprintConnectionManager {
 
     private Gson gson;
 
-    public OctoprintConnectionManager(String host, int port, String apiKey){
+    public OctoprintConnectionManager(String host, int port, String apiKey, int updateTime){
         this.host = host;
         this.port = String.valueOf(port);
+        this.updateTime = updateTime;
         this.octoprintStatusListeners = new ArrayList<>();
         this.apiKey = apiKey;
         this.gson = new Gson();
         this.lastStatus = new OctoprintStatus();
+        this.currentStatus = new OctoprintStatus();
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -72,7 +75,18 @@ public class OctoprintConnectionManager {
                 octoprintStatus.connection = gson.fromJson(response, Connection.class);
                 octoprintStatus.connectedToOctopi = true;
 
+                response = makeGetRequest("/api/system/commands");
+
+                // EJEMPLO DE RESPUESTA SACADO DE IMPRESORA CON OCTOPI
+                // {  "core": [    {      "action": "shutdown",       "confirm": "<strong>You are about to shutdown the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Shutdown system",       "resource": "http://192.168.1.126/api/system/commands/core/shutdown",       "source": "core"    },     {      "action": "reboot",       "confirm": "<strong>You are about to reboot the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Reboot system",       "resource": "http://192.168.1.126/api/system/commands/core/reboot",       "source": "core"    },     {      "action": "restart",       "confirm": "<strong>You are about to restart the OctoPrint server.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Restart OctoPrint",       "resource": "http://192.168.1.126/api/system/commands/core/restart",       "source": "core"    },     {      "action": "restart_safe",       "confirm": "<strong>You are about to restart the OctoPrint server in safe mode.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Restart OctoPrint in safe mode",       "resource": "http://192.168.1.126/api/system/commands/core/restart_safe",       "source": "core"    }  ],   "custom": []}
+                response = "{  \"core\": [    {      \"action\": \"shutdown\",       \"confirm\": \"<strong>You are about to shutdown the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Shutdown system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/shutdown\",       \"source\": \"core\"    },     {      \"action\": \"reboot\",       \"confirm\": \"<strong>You are about to reboot the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Reboot system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/reboot\",       \"source\": \"core\"    },     {      \"action\": \"restart\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart\",       \"source\": \"core\"    },     {      \"action\": \"restart_safe\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server in safe mode.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint in safe mode\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart_safe\",       \"source\": \"core\"    }  ],   \"custom\": []}";
+
+                response = makeGetRequest("/api/files");
+                System.out.println(response);
+                octoprintStatus.files = gson.fromJson(response, OctoprintFiles.class);
+
                 response = makeGetRequest("/api/printer");
+
                 octoprintStatus.printerStatus = gson.fromJson(response, PrinterStatus.class);
 
                 if (octoprintStatus.isPrinterConnected()){
@@ -116,12 +130,13 @@ public class OctoprintConnectionManager {
             });
 
             try {
-                Thread.sleep(1500);
+                Thread.sleep(updateTime);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
+
 
     private String makeGetRequest(String path) throws StatusCodeException, IOException {
         return makeRequest(path, false, null);

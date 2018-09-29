@@ -3,21 +3,38 @@ package com.and3r.octopijavadisplay.ui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
-public class IndefiniteLoadingIndicator extends JPanel {
+public class IndefiniteLoadingIndicator extends JPanel implements ComponentListener {
 
     private int currentSize;
-    private int maxSize;
-    private int minSize;
-    private boolean directionBigger;
 
-    private int currentAngle;
+    private int angles[];
+    private int anglesSize[];
+    private int speeds[];
+    private Color[] colors;
+    private int x;
+    private int y;
 
 
     public IndefiniteLoadingIndicator(){
-        maxSize = 100;
-        minSize = 50;
+
+
+        angles = new int[]{0, 120, 240, 60, 180, 300};
+        anglesSize = new int[]{60, 60, 60, 60, 60, 60};
+        speeds = new int[]{1, 1, 1, 1, 1, 1};
+        colors = new Color[]{
+                ColorManager.buttonNormalStateStrokeColorPressed,
+                ColorManager.buttonNormalStateStrokeColorPressed,
+                ColorManager.buttonNormalStateStrokeColorPressed,
+                ColorManager.buttonNormalStateStrokeColor,
+                ColorManager.buttonNormalStateStrokeColor,
+                ColorManager.buttonNormalStateStrokeColor,
+        };
+
         setOpaque(false);
+        addComponentListener(this);
         Timer timer = new Timer(10, new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,6 +42,34 @@ public class IndefiniteLoadingIndicator extends JPanel {
             }
         });
         timer.start();
+    }
+
+    @Override
+    public void componentResized(ComponentEvent e) {
+        int smallestSize = getHeight();
+        if (smallestSize > getWidth()){
+            smallestSize = getWidth();
+        }
+
+        currentSize = smallestSize / 2;
+
+        x = getWidth()/2 - currentSize/2;
+        y = getHeight()/2 - currentSize/2;
+    }
+
+    @Override
+    public void componentMoved(ComponentEvent e) {
+
+    }
+
+    @Override
+    public void componentShown(ComponentEvent e) {
+
+    }
+
+    @Override
+    public void componentHidden(ComponentEvent e) {
+
     }
 
     @Override
@@ -37,50 +82,23 @@ public class IndefiniteLoadingIndicator extends JPanel {
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
 
-        int smallestSize = getHeight();
-        if (smallestSize > getWidth()){
-            smallestSize = getWidth();
-        }
 
-        maxSize = smallestSize / 2;
-        minSize = smallestSize / 6;
+        for (int i=0; i<angles.length; i++){
 
-        if (directionBigger){
-            currentSize ++;
-            if (currentSize > maxSize){
-                directionBigger = false;
-                currentSize = maxSize;
+            angles[i] = angles[i] + speeds[i];
+            if (angles[i] > 360){
+                angles[i] -= 360;
+            }else if (angles[i] < 0){
+                angles[i] += 360;
             }
-        }else{
-            currentSize--;
-            if (currentSize < minSize){
-                directionBigger = true;
-                currentSize = minSize;
-            }
+            g.setColor(colors[i]);
+            g.fillArc(x, y, currentSize, currentSize, angles[i], anglesSize[i]);
         }
-
-        int x = getWidth()/2 - currentSize/2;
-        int y = getHeight()/2 - currentSize/2;
-
-
-
-
-        currentAngle ++;
-        if (currentAngle > 360){
-            currentAngle = 0;
-        }
-        int secondAngle = currentAngle + 60;
-        if (secondAngle > 360){
-            secondAngle -= 360;
-        }
-
-        g.setColor(ColorManager.buttonNormalStateStrokeColor);
-        g.fillArc(x, y, currentSize, currentSize, currentAngle, secondAngle);
-
-        //g.setColor(ColorManager.buttonNormalStateStrokeColorPressed);
-        //g.drawArc(x, y, currentSize, currentSize, currentAngle, secondAngle);
-
+        g.setColor(ColorManager.backgroundColor);
+        g.fillArc(x+currentSize/4, y+currentSize/4, currentSize/2, currentSize/2, 0, 360);
     }
+
+
 
 
 }

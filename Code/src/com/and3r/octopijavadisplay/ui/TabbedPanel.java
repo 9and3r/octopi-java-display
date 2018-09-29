@@ -19,9 +19,6 @@ public class TabbedPanel extends JPanel implements MouseListener {
 
     private JPanel topPanel;
 
-
-
-
     public TabbedPanel(){
         panels = new ArrayList<>();
         panelTitles = new ArrayList<>();

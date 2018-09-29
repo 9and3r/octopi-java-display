@@ -1,11 +1,14 @@
 package com.and3r.octopijavadisplay.ui.icons;
 
 import com.and3r.octopijavadisplay.datamodels.TemperatureDevice;
+import com.and3r.octopijavadisplay.ui.DigitInputDialog;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TemperatureDisplayPanel extends JPanel implements ComponentListener {
 
@@ -21,27 +24,8 @@ public class TemperatureDisplayPanel extends JPanel implements ComponentListener
         bottomPanel.setOpaque(false);
         bottomPanel.setLayout(new GridLayout(1, 0, 10, 10));
 
-        // Off button
-        JButton currentButton = new JButton("Off");
-        currentButton.setActionCommand("off");
-        bottomPanel.add(currentButton);
-
         if (extruder){
             icon = new ExtruderIcon();
-
-            currentButton = new JButton("180ºC");
-            bottomPanel.add(currentButton);
-
-            currentButton = new JButton("200ºC");
-            bottomPanel.add(currentButton);
-
-            currentButton = new JButton("210ºC");
-            bottomPanel.add(currentButton);
-
-            currentButton = new JButton("220ºC");
-            bottomPanel.add(currentButton);
-
-
 
             JPanel extrudePanel = new JPanel();
             extrudePanel.setLayout(new GridLayout(0, 1, 10, 10));
@@ -59,17 +43,9 @@ public class TemperatureDisplayPanel extends JPanel implements ComponentListener
             extrudePanel.add(extrudeButton);
 
             add(extrudePanel, BorderLayout.EAST);
-
-
-
-
+            
         }else{
             icon = new BedIcon();
-            currentButton = new JButton("60ºC (PLA)");
-            bottomPanel.add(currentButton);
-
-            currentButton = new JButton("ºC (PLA)");
-            bottomPanel.add(currentButton);
         }
 
 
@@ -82,12 +58,21 @@ public class TemperatureDisplayPanel extends JPanel implements ComponentListener
 
         addComponentListener(this);
         setOpaque(false);
+
+        label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                DigitInputDialog digitInputDialog = new DigitInputDialog((Frame) SwingUtilities.getWindowAncestor(TemperatureDisplayPanel.this), "Set temperature", " ºC", 3);
+                digitInputDialog.setVisible(true);
+            }
+        });
     }
 
     public void setTemp(TemperatureDevice temp) {
         if (temp != null){
             icon.setTemp(temp.actual);
-            label.setText(String.valueOf(temp.actual) + "/" + String.valueOf(temp.target) + "ºC");
+            label.setText(String.valueOf((int)temp.actual) + "/" + String.valueOf((int)temp.target) + "ºC");
         }
     }
 
