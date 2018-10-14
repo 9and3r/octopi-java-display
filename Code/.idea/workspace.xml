@@ -16,22 +16,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OctoPiJavaDisplay$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1537983093936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OctoPiJavaDisplay$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1538585408464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="SystemPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/SystemPanel.java">
+        <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/SystemPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#249#250#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="118">
+              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentJobPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/CurrentJobPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -49,62 +51,63 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>octoprintStatusListeners</find>
+      <find>JscrollPa</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/icons/ExtruderIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintOptionsStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/PrinterStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DimensionManager.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ExtruderIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/BedIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/Job.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/JobProgress.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomTabbedPane.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TopPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ColorManager.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomLookAndFeel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomButtonLookAndFeel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/LabelCurrentJob.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/SpringUtilities.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/OctoprintNotConnectedPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/AnimtationHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperatureIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TabLabel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomProgressBar.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/JobStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/BaseIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/HomeIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ArrowIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/OperationIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DragScrollListener.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Arguments.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/BasePanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/PrinterNotConnectedPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperaturesPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/CurrentJobPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ControlPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/LoadingPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/IndefiniteLoadingIndicator.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/StartStopPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TabbedPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintStatusListener.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/FileItem.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintFile.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintFiles.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/FileListPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ClickableIcon.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/MainJframe.java" />
         <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TemperatureJDialog.java" />
         <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DigitInputDialog.java" />
         <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperatureDisplayPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/Action.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintStatus.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DragScrollListener.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintActionsResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TouchScroll.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintAction.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/FileListPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/CurrentJobPanel.java" />
         <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/SystemPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/SpringUtilities.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TemperaturesPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/LabelCurrentJob.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/LoadingPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/BaseIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/ArrowIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/HomeIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/OperationIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomButtonLookAndFeel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomJLabelLookAndFeel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomJPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/PrinterNotConnectedPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/ColorManager.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/ExtruderIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/BedIcon.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/BackgroundPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintStatus.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/DimensionManager.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/job/Job.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/job/JobProgress.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/StatusCodeException.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/TemperaturesPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TemperatureDisplayPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/files/OctoprintFile.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/OctoprintConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/FileItem.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/FileListPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/TouchScroll.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomLookAndFeel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomProgressBar.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TabbedPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TabLabel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/MainJframe.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/DigitInputDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/CurrentJobPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/SystemPanel.java" />
       </list>
     </option>
   </component>
@@ -147,6 +150,36 @@
               <item name="Code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="datamodels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="datamodels" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="datamodels" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -155,15 +188,48 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="lookandfeel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="mainpanels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="mainpanels" type="462c0819:PsiDirectoryNode" />
+              <item name="connected" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OctoPiJavaDisplay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="octopijavadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,10 +251,10 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application">
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.and3r.octopijavadisplay.Main" />
       <module name="Code" />
-      <option name="PROGRAM_PARAMETERS" value="-key 780CC77D0E364E2E816C903EB3A4ED32 -port 5000 -cursor true" />
+      <option name="PROGRAM_PARAMETERS" value="-port 5000 -cursor true -width 800 -height 480" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -258,20 +324,20 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.52671343" side_tool="true" weight="0.22914466" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47328657" visible="true" weight="0.22914466" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47328657" visible="true" weight="0.22914466" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48623854" weight="0.39915523" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48623854" weight="0.39915523" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32973558" />
+      <window_info active="true" anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.32973558" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -286,188 +352,178 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/PrinterNotConnectedPanel.java</url>
-          <line>14</line>
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/PrinterNotConnectedPanel.java</url>
+          <line>11</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/PrinterNotConnectedPanel.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomTabbedPane.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintConnectionManager.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/LoadingPanel.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/LoadingPanel.java</url>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ListAdapter.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/ListAdapter.java</url>
+          <line>33</line>
           <properties />
-          <option name="timeStamp" value="123" />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/OctoprintConnectionManager.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/OctoprintConnectionManager.java</url>
+          <line>238</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/OctoprintConnectionManager.java</url>
+          <line>261</line>
+          <properties />
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="124" />
+      <option name="time" value="150" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DimensionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/TemperatureDevice.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/actions.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/printer/Temperatures.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/BedIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/Job.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/actions/OctoprintActionsResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/JobProgress.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/files/OctoprintFiles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomTabbedPane.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/printer/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/actions/OctoprintAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomTabbedPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/ListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ColorManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/LoadingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        <state relative-caret-position="390">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomLookAndFeel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/ClickableIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+        <state relative-caret-position="-392">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/OperationIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/LabelCurrentJob.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/DragScrollListener.java" />
     <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomButtonLookAndFeel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        <state relative-caret-position="615">
+          <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ExtruderIcon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomJPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/PrinterNotConnectedPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        <state relative-caret-position="135">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/AnimtationHelper.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TabLabel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomJLabelLookAndFeel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="120">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomProgressBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/SpringUtilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/JobStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/TemperatureIcon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/HomeIcon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/HomeIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="345">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ArrowIcon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/ExtruderIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="480">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/OperationIcon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/BedIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="555">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DragScrollListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Arguments.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/PrinterConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/ColorManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/Connection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/BackgroundPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/ArrowIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="1288">
+          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -478,234 +534,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/PrinterStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/icons/BaseIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/DimensionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="129" column="65" selection-start-line="129" selection-start-column="65" selection-end-line="129" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/job/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/IndefiniteLoadingIndicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/job/JobProgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/job/JobStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/BasePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/ControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="-525">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/PrinterNotConnectedPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/StatusCodeException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="165">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ControlPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/BasePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/CurrentJobPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/TemperaturesPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="315">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/files/OctoprintFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        <state relative-caret-position="180">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/LabelCurrentJob.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/connection/OctoprintConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="238" selection-start-line="238" selection-end-line="238" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/FileItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/BaseIcon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/utils/TouchScroll.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="116" column="52" selection-start-line="115" selection-start-column="3" selection-end-line="116" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/IndefiniteLoadingIndicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/StartStopPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/TabbedPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="45">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintStatusListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/LoadingPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomLookAndFeel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="523">
+          <caret line="55" column="79" selection-start-line="55" selection-start-column="79" selection-end-line="55" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintFile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/lookandfeel/CustomProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="61" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="61" />
+        <state relative-caret-position="210">
+          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/datamodels/OctoprintFiles.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/FileListPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="41" column="67" lean-forward="true" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/FileItem.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TabbedPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="-240">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/ListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TabLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/FileListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/ClickableIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/OctoprintConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="132" column="39" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/MainJframe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="403">
+          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperaturesPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/TemperatureDisplayPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/components/DigitInputDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/DigitInputDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/CurrentJobPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2763#2764#0" expanded="true" />
-            <element signature="e#2804#2805#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperatureDisplayPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/mainpanels/connected/SystemPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="92" column="161" selection-start-line="92" selection-start-column="161" selection-end-line="92" selection-end-column="161" />
-          <folding>
-            <element signature="e#2566#2741#0" expanded="true" />
-            <element signature="e#2740#2741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/icons/TemperatureIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding>
-            <element signature="e#1361#1533#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/and3r/octopijavadisplay/ui/SystemPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="118">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
         </state>
       </provider>
     </entry>

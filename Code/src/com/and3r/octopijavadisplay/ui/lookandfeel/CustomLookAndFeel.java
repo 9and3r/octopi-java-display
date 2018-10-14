@@ -1,7 +1,7 @@
 package com.and3r.octopijavadisplay.ui.lookandfeel;
 
 
-import com.and3r.octopijavadisplay.ui.ColorManager;
+import com.and3r.octopijavadisplay.ui.utils.ColorManager;
 
 import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
@@ -39,28 +39,24 @@ public class CustomLookAndFeel extends MetalLookAndFeel {
         super.initClassDefaults (table);
         table.put ("ButtonUI", CustomButtonLookAndFeel.class.getCanonicalName());
         table.put ("ProgressBarUI", CustomProgressBar.class.getCanonicalName());
-        table.put ("TabbedPaneUI", CustomTabbedPane.class.getCanonicalName());
+        table.put ("LabelUI", CustomJLabelLookAndFeel.class.getCanonicalName());
     }
 
     @Override
     protected void initComponentDefaults (UIDefaults table) {
         super.initComponentDefaults(table);
 
-        table.put("Button.highlight", ColorManager.buttonNormalStateStrokeColorPressed);
+        table.put("Button.highlight", ColorManager.accentColor);
         table.put("Button.opaque", true);
         table.put("Button.border", BorderFactory.createEmptyBorder(7, 17, 7, 17));
-        table.put("Button.foreground", Color.WHITE);
-        table.put("Button.background", ColorManager.buttonNormalStateStrokeColorPressed);
-        table.put("Button.backgroundPressed", ColorManager.buttonNormalStateStrokeColor);
+        table.put("Button.foreground", ColorManager.textColor);
+        table.put("Button.background", ColorManager.primaryColor);
+        table.put("Button.backgroundPressed", ColorManager.accentColor);
 
-        table.put ("TabbedPane.font", new Font("Arial", Font.PLAIN, 30));
-        table.put ("TabbedPane.background", Color.WHITE);
-        table.put ("TabbedPane.foreground", Color.BLACK);
-        table.put ("TabbedPane.border", BorderFactory.createEmptyBorder ());
-        table.put ("TabbedPane.shadow", null);
-        table.put ("TabbedPane.darkShadow", null);
-        table.put ("TabbedPane.highlight", new Color (238, 238, 238));
-        table.put ("TabbedPane.borderHighlightColor", new Color (224, 224, 224));
+        UIManager.put("ProgressBar.selectionBackground", ColorManager.textColor);//Red
+
+        table.put("Label.foreground", ColorManager.textColor);
+
     }
 
 

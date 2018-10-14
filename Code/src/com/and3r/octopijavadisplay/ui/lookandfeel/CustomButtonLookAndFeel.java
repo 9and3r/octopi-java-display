@@ -1,12 +1,12 @@
 package com.and3r.octopijavadisplay.ui.lookandfeel;
 
+import com.and3r.octopijavadisplay.ui.utils.DimensionManager;
+
 import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 public class CustomButtonLookAndFeel extends BasicButtonUI {
 
@@ -23,6 +23,7 @@ public class CustomButtonLookAndFeel extends BasicButtonUI {
         button.setBorder(UIManager.getBorder("Button.border"));
         button.setBackground(UIManager.getColor("Button.background"));
         button.setForeground(UIManager.getColor("Button.foreground"));
+        c.setFont(DimensionManager.defaultFont);
         button.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -46,6 +47,27 @@ public class CustomButtonLookAndFeel extends BasicButtonUI {
 
             @Override
             public void mouseExited(MouseEvent e) {
+                button.setBackground (UIManager.getColor ("Button.background"));
+            }
+        });
+        c.addComponentListener(new ComponentListener() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                c.setFont(DimensionManager.defaultFont);
+            }
+
+            @Override
+            public void componentMoved(ComponentEvent e) {
+
+            }
+
+            @Override
+            public void componentShown(ComponentEvent e) {
+
+            }
+
+            @Override
+            public void componentHidden(ComponentEvent e) {
 
             }
         });

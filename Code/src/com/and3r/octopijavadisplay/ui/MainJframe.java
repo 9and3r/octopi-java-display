@@ -1,10 +1,16 @@
 package com.and3r.octopijavadisplay.ui;
 
-import com.and3r.octopijavadisplay.OctoprintConnectionManager;
-import com.and3r.octopijavadisplay.OctoprintStatus;
-import com.and3r.octopijavadisplay.OctoprintStatusListener;
-import com.and3r.octopijavadisplay.ui.icons.TemperatureIcon;
-import com.and3r.octopijavadisplay.ui.icons.TemperaturesPanel;
+import com.and3r.octopijavadisplay.connection.OctoprintConnectionManager;
+import com.and3r.octopijavadisplay.datamodels.OctoprintStatus;
+import com.and3r.octopijavadisplay.connection.OctoprintStatusListener;
+import com.and3r.octopijavadisplay.ui.components.TabbedPanel;
+import com.and3r.octopijavadisplay.ui.mainpanels.connected.TemperaturesPanel;
+import com.and3r.octopijavadisplay.ui.mainpanels.*;
+import com.and3r.octopijavadisplay.ui.mainpanels.connected.ControlPanel;
+import com.and3r.octopijavadisplay.ui.mainpanels.connected.CurrentJobPanel;
+import com.and3r.octopijavadisplay.ui.mainpanels.connected.FileListPanel;
+import com.and3r.octopijavadisplay.ui.mainpanels.connected.SystemPanel;
+import com.and3r.octopijavadisplay.ui.utils.ColorManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,11 +22,12 @@ public class MainJframe extends JFrame implements OctoprintStatusListener {
     private OctoprintStatus lastStatus;
     private OctoprintConnectionManager octoprintConnectionManager;
 
-    public MainJframe(OctoprintConnectionManager octoprintConnectionManager){
+    public MainJframe(OctoprintConnectionManager octoprintConnectionManager, int width, int height){
+        this.setSize(width, height);
         this.lastStatusInt = Integer.MIN_VALUE;
         this.octoprintConnectionManager = octoprintConnectionManager;
         setLayout(new BorderLayout());
-        setSize(800, 480);
+
         getContentPane().setBackground(ColorManager.backgroundColor);
         setVisible(true);
         octoprintConnectionManager.addStatusListener(this);
@@ -49,18 +56,15 @@ public class MainJframe extends JFrame implements OctoprintStatusListener {
                 case OctoprintStatus.STATUS_OCTOPRINT_CONNECTED_DETECTING_BAUD_RATE:
                     newPanel = new LoadingPanel(octoprintConnectionManager, "Detecting baudrate");
                     break;
-                case OctoprintStatus.STATUS_OCTOPRINT_CONNECTED_OPERATIONAL:
+                default:
                     TabbedPanel tabbedPane = new TabbedPanel();
                     newPanel = tabbedPane;
 
                     tabbedPane.add("Job", new CurrentJobPanel(octoprintConnectionManager));
-                    tabbedPane.add("Temperature", new TemperaturesPanel(octoprintConnectionManager));
-                    tabbedPane.add("Head", new ControlPanel(octoprintConnectionManager));
+                    tabbedPane.add("Tools", new TemperaturesPanel(octoprintConnectionManager));
+                    tabbedPane.add("Control", new ControlPanel(octoprintConnectionManager));
                     tabbedPane.add("Files", new FileListPanel(octoprintConnectionManager));
                     tabbedPane.add("System", new SystemPanel(octoprintConnectionManager));
-                    break;
-                default:
-                    newPanel = new LoadingPanel(octoprintConnectionManager);
                     break;
             }
             currentPanel = newPanel;
