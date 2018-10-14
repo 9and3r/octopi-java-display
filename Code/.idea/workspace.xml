@@ -252,7 +252,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.and3r.octopijavadisplay.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.and3r.octoprint.javadisplay.Main" />
       <module name="Code" />
       <option name="PROGRAM_PARAMETERS" value="-port 5000 -cursor true -width 800 -height 480" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
