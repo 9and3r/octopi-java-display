@@ -45,7 +45,7 @@ public class ControlPanel extends BasePanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                octoprint.moveHead("x", 10);
+                octoprint.moveHead("x", -10);
             }
         });
 
@@ -54,7 +54,7 @@ public class ControlPanel extends BasePanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                octoprint.moveHead("x", -10);
+                octoprint.moveHead("x", 10);
             }
         });
 

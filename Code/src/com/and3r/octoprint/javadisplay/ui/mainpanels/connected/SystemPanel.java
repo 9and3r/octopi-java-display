@@ -1,6 +1,7 @@
 package com.and3r.octoprint.javadisplay.ui.mainpanels.connected;
 
 import com.and3r.octoprint.javadisplay.connection.OctoprintConnectionManager;
+import com.and3r.octoprint.javadisplay.connection.StatusCodeException;
 import com.and3r.octoprint.javadisplay.datamodels.OctoprintStatus;
 import com.and3r.octoprint.javadisplay.datamodels.actions.OctoprintAction;
 import com.and3r.octoprint.javadisplay.ui.components.BasePanel;
@@ -12,6 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
@@ -76,8 +78,12 @@ public class SystemPanel extends BasePanel {
 
                                 message = "<html><body style=\"width: " + SwingUtilities.getWindowAncestor(SystemPanel.this).getWidth()/1.3 + ";\">" + message + "</body></html>";
                             }
-                            JOptionPane.showOptionDialog((Frame) SwingUtilities.getWindowAncestor(SystemPanel.this), message, item.name, JOptionPane.YES_NO_CANCEL_OPTION,
+                            int result = JOptionPane.showOptionDialog((Frame) SwingUtilities.getWindowAncestor(SystemPanel.this), message, item.name, JOptionPane.YES_NO_CANCEL_OPTION,
                                     JOptionPane.QUESTION_MESSAGE, null, new String[]{"Cancel", item.name}, "Cancel");
+
+                            if (result == 1){
+                                octoprint.executeAction(item);
+                            }
                         }
 
                     }

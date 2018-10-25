@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Code:jar">
+  <artifact type="jar" name="OctoprintJavaDisplay:jar">
     <output-path>$PROJECT_DIR$/Release</output-path>
     <root id="archive" name="Code.jar">
       <element id="module-output" name="Code" />

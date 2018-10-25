@@ -1,6 +1,7 @@
 package com.and3r.octoprint.javadisplay.connection;
 
 import com.and3r.octoprint.javadisplay.datamodels.OctoprintStatus;
+import com.and3r.octoprint.javadisplay.datamodels.actions.OctoprintAction;
 import com.and3r.octoprint.javadisplay.datamodels.actions.OctoprintActionsResponse;
 import com.and3r.octoprint.javadisplay.datamodels.files.OctoprintFile;
 import com.and3r.octoprint.javadisplay.datamodels.files.OctoprintFiles;
@@ -85,7 +86,7 @@ public class OctoprintConnectionManager {
 
                 // EJEMPLO DE RESPUESTA SACADO DE IMPRESORA CON OCTOPI
                 // {  "core": [    {      "action": "shutdown",       "confirm": "<strong>You are about to shutdown the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Shutdown system",       "resource": "http://192.168.1.126/api/system/commands/core/shutdown",       "source": "core"    },     {      "action": "reboot",       "confirm": "<strong>You are about to reboot the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Reboot system",       "resource": "http://192.168.1.126/api/system/commands/core/reboot",       "source": "core"    },     {      "action": "restart",       "confirm": "<strong>You are about to restart the OctoPrint server.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Restart OctoPrint",       "resource": "http://192.168.1.126/api/system/commands/core/restart",       "source": "core"    },     {      "action": "restart_safe",       "confirm": "<strong>You are about to restart the OctoPrint server in safe mode.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).",       "name": "Restart OctoPrint in safe mode",       "resource": "http://192.168.1.126/api/system/commands/core/restart_safe",       "source": "core"    }  ],   "custom": []}
-                response = "{  \"core\": [    {      \"action\": \"shutdown\",       \"confirm\": \"<strong>You are about to shutdown the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Shutdown system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/shutdown\",       \"source\": \"core\"    },     {      \"action\": \"reboot\",       \"confirm\": \"<strong>You are about to reboot the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Reboot system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/reboot\",       \"source\": \"core\"    },     {      \"action\": \"restart\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart\",       \"source\": \"core\"    },     {      \"action\": \"restart_safe\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server in safe mode.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint in safe mode\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart_safe\",       \"source\": \"core\"    }  ],   \"custom\": []}";
+                //response = "{  \"core\": [    {      \"action\": \"shutdown\",       \"confirm\": \"<strong>You are about to shutdown the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Shutdown system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/shutdown\",       \"source\": \"core\"    },     {      \"action\": \"reboot\",       \"confirm\": \"<strong>You are about to reboot the system.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Reboot system\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/reboot\",       \"source\": \"core\"    },     {      \"action\": \"restart\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart\",       \"source\": \"core\"    },     {      \"action\": \"restart_safe\",       \"confirm\": \"<strong>You are about to restart the OctoPrint server in safe mode.</strong></p><p>This action may disrupt any ongoing print jobs (depending on your printer's controller and general setup that might also apply to prints run directly from your printer's internal storage).\",       \"name\": \"Restart OctoPrint in safe mode\",       \"resource\": \"http://192.168.1.126/api/system/commands/core/restart_safe\",       \"source\": \"core\"    }  ],   \"custom\": []}";
                 octoprintStatus.actions = gson.fromJson(response, OctoprintActionsResponse.class);
 
                 response = makeGetRequest("/api/files");
@@ -152,19 +153,23 @@ public class OctoprintConnectionManager {
         return makeRequest(path, true, postData);
     }
 
-
     private String makeRequest(String path, boolean post, String postData) throws StatusCodeException, IOException {
         URL url = null;
             url = new URL("http://" + host + ":" + port + path);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setConnectTimeout(5000);
             con.setReadTimeout(5000);
-            con.setRequestMethod("GET");
+            if (post){
+                con.setRequestMethod("POST");
+            }else{
+                con.setRequestMethod("GET");
+            }
             con.setDoOutput(post);
             con.setDoInput(true);
             con.setRequestProperty("X-Api-Key", apiKey);
 
-            if (post){
+
+            if (post && postData != null){
                 byte[] out = postData.getBytes(StandardCharsets.UTF_8);
                 int length = out.length;
 
@@ -260,6 +265,16 @@ public class OctoprintConnectionManager {
         String command = "{\"targets\": { \"tool" + extruder + "\": " + value + "},\"command\":\"target\"}";
         try {
             makePostRequest("/api/printer/tool", command);
+        } catch (StatusCodeException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void executeAction(OctoprintAction action){
+        try {
+            makeRequest("/api/system/commands/" + action.source + "/" + action.action , true, null);
         } catch (StatusCodeException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -65,6 +65,7 @@ public class Main {
     // sudo apt-get install oracle-java8-jdk
     // sudo apt-get install xserver-xorg-legacy
     // https://www.raspberrypi.org/forums/viewtopic.php?t=5851
+    // https://www.raspberrypi.org/forums/viewtopic.php?t=137612#p913702
 
     public static void main(String[] args) {
 
